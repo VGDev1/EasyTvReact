@@ -24,7 +24,7 @@ class App extends Component {
           <Switch>
               <Route exact path='/' component={Start} />
               <Route path='/programs' component={Programs} />
-              <Route path='/player' component={Player} />
+              <Route path='/player/:m3u8' component={Player} />
           </Switch>
         </div>
       </Router>
