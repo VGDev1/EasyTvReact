@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Programs from './components/Programs';
+import Start from './components/Start';
+import Program from './components/Program'
+import Player from './components/Player'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+    <Router>
+        <div>
+          <h2>An amazing react page</h2>
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <ul className="navbar-nav mr-auto">
+            <li><Link to={'/'} className="nav-link"> Start </Link></li>
+            <li><Link to={'/programs'} className="nav-link">Programs</Link></li>
+            <li><Link to={'/player'} className="nav-link">Player</Link></li>
+          </ul>
+          </nav>
+          <hr />
+          <Switch>
+              <Route exact path='/' component={Start} />
+              <Route path='/programs' component={Programs} />
+              <Route path='/player' component={Player} />
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
