@@ -13,8 +13,14 @@ export class Program extends Component {
     } 
     return (
       <div class='media'>
-        <a href="/" onClick={handleclick} > 
-        <Link to={'/'} className="nav-link"> {this.props.label} 
+        <a href="/#" onClick={handleclick} > 
+        <Link to={{
+          pathname: '/player',
+          className: "nav-link",
+          state: {
+            m3u8Link: this.props.url
+        }
+      }} >
         <img 
         src={fixedUrl}
         alt="new"
