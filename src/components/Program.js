@@ -5,11 +5,11 @@ import Player from './Player'
 import Start from './Start';
 
 export class Program extends Component {
+
   render() {
     const fixedUrl = this.props.thumbnail.replace(/140/, /500/);
     function handleclick(e) {
       e.preventDefault();
-      console.log('the link was clicked'); 
     } 
     return (
       <div class='media'>
@@ -18,7 +18,7 @@ export class Program extends Component {
           pathname: '/player',
           className: "nav-link",
           state: {
-            m3u8Link: this.props.url
+            m3u8Link: this.props.svtId
         }
       }} >
         <img 

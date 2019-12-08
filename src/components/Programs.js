@@ -19,7 +19,7 @@ async getPrograms(section) {
     console.log(section);
     const data = await fetch(`http://localhost:3000/api/svt/program/${section}`);
     const resp = await data.json();
-    return resp;
+    return resp; 
 }
 
 
@@ -30,7 +30,7 @@ async componentDidMount() {
           <Program
               label={x.name}
               thumbnail={x.thumbnail}
-              url={x.svtId}
+              svtId={x.svtId}
           />
       );
   });
