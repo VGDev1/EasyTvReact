@@ -27,7 +27,7 @@ export class Program extends Component {
       />
       </Link>
       </a>
-      <p1>{this.props.title}</p1>
+      <p>{this.props.label}</p>
       </div>
     )
   }

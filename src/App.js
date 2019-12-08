@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Programs from './components/Programs';
 import Start from './components/Start';
-import Program from './components/Program'
 import Player from './components/Player'
 
 
