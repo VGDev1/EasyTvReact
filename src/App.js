@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Programs from './components/Programs';
 import Start from './components/Start';
 import Player from './components/Player'
+import AOs from './components/AOs'
 
 
 class App extends Component {
@@ -15,14 +16,15 @@ class App extends Component {
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <ul className="navbar-nav mr-auto">
             <li><Link to={'/'} className="nav-link"> Start </Link></li>
-            <li><Link to={'/programs'} className="nav-link">Programs</Link></li>
-            <li><Link to={'/player'} className="nav-link">Player</Link></li>
+            <li><Link to={'/programs/populart'} className="nav-link">Populart</Link></li>
+            <li><Link to={'/programs/AO'} className="nav-link">A-Ö</Link></li>
           </ul>
           </nav>
           <hr />
           <Switch>
               <Route exact path='/' component={Start} />
-              <Route path='/programs' component={Programs} />
+              <Route path='/programs/populart' component={Programs} />
+              <Route path='/programs/AO' component={AOs} />
               <Route path='/player' component={Player} />
           </Switch>
         </div>

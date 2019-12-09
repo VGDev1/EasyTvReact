@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
-import Json from './populart'
 import Program from './Program'
 import './style.css'
-import Async from 'react-async';
-import { useAsync } from "react-async"
-import Json2 from './populart2'
 
 
 
