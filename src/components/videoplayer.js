@@ -1,4 +1,6 @@
 /* eslint-disable */
+import Hls from "hls.js";
+
 
 (function createHlsPlayer() {
     const url = new URLSearchParams(window.location.search).get('url');
