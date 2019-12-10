@@ -7,7 +7,6 @@ import Start from './Start';
 export class Program extends Component {
 
   render() {
-    const fixedUrl = this.props.thumbnail.replace(/140/, /500/);
     function handleclick(e) {
       e.preventDefault();
     } 
@@ -22,7 +21,7 @@ export class Program extends Component {
         }
       }} >
         <img 
-        src={fixedUrl}
+        src={this.props.thumbnail}
         alt="new"
       />
       </Link>
