@@ -6,7 +6,7 @@ export class StartButtons extends Component {
     render() {
         return (
             <div class='choice center'>
-                <Link to={'/programs'} className='nav-link'>
+                <Link to={this.props.path} className='nav-link'>
                     {' '}
                     {this.props.label}{' '}
                 </Link>
