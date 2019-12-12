@@ -38,8 +38,6 @@ async componentDidMount() {
                 />
             );
         }
-        else
-        return (<h1>Coming soon</h1>)
       });
   });
   console.log(episodes)
