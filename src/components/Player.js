@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import ReactHLS from 'react-hls';
 
-import Hls from "hls.js";
-
 class HLSPage extends Component {
     constructor() {
         super();

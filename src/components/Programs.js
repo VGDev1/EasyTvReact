@@ -27,6 +27,7 @@ async componentDidMount() {
               label={x.name}
               thumbnail={x.thumbnail}
               slug={x.slug}
+              type={x.type}
           />
       );
   });
