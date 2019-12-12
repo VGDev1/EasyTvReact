@@ -3,7 +3,12 @@ import './style.css'
 import { Link } from 'react-router-dom';
 
 export class Program extends Component {
-
+  
+  async getVideoId(id) {
+    const data = await fetch(`http://localhost:3000/api/svt/getVideoId/${id}`);
+    const resp = await data.json();
+    return resp;
+  }
   render() {
 
 
@@ -11,6 +16,8 @@ export class Program extends Component {
       e.preventDefault();
     } 
     if(this.props.type === "Single") {
+      console.log("CLICKADE PÅ NÅGOT SOM BORDE SPELAS")
+      console.log(this.props.slug)
       return (
         <div class='media'>
           <a href="/#" onClick={handleclick} > 
@@ -18,7 +25,8 @@ export class Program extends Component {
             pathname: '/player',
             className: "nav-link",
             state: {
-              slug: this.props.slug
+              slug: this.props.slug,
+              svtVideoId: this.props.svtVideoId
           }
         }} >
           <img 
@@ -37,10 +45,10 @@ export class Program extends Component {
           <a href="/#" onClick={handleclick} > 
           <Link to={{
             pathname: '/episodes',
-            className: "nav-link",
+            className: "test",
             state: {
               slug: this.props.slug,
-
+              svtVideoId: this.props.svtVideoId
           }
         }} >
           <img 

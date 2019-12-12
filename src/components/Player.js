@@ -28,13 +28,11 @@ class HLSPage extends Component {
       }
 
       async componentDidMount() {
-        const videoId = await this.getVideoIdFromSlug(this.props.location.state.slug)
-        console.log(this.props.location.state.slug)
-        console.log(videoId.data[1].items[0].item.videoSvtId)
-        const resp = await this.getm3u8Link(videoId.data[1].items[0].item.videoSvtId)
-        console.log(resp)
-        this.setState({link: resp});
-      }
+          const resp = await this.getm3u8Link(this.props.location.state.svtVideoId)
+          console.log(resp)
+          this.setState({link: resp});
+        }
+      
       
     render() {
       

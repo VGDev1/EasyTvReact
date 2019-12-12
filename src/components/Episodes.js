@@ -8,7 +8,7 @@ export class Episodes extends Component {
   constructor() {
     super();
     this.state = { 
-      episodesElement: [] };
+      episodesElement: null };
     }
   
 async getEpisodes(slug) {
@@ -23,9 +23,9 @@ async getEpisodes(slug) {
 
 async componentDidMount() {
   const resp = await this.getEpisodes(this.props.location.state.slug)
-  let Episodes = resp.data.map((x) => {
-      x.items.map((y) => {
-        if(y.item.videoSvtId !== "") {
+  let episodes = resp.data.map((x) => {
+        return x.items.map((y) => {
+            if(y.item.videoSvtId !== "") {
             console.log(this.getThumbnail(y.item.image.id, y.item.image.changed))
             console.log(y.item.name)
             return (
@@ -33,18 +33,23 @@ async componentDidMount() {
                     label={y.item.name}
                     thumbnail={this.getThumbnail(y.item.image.id, y.item.image.changed)}
                     type = "Single"
+                    svtVideoId = {y.item.videoSvtId}
+                    slug = {this.props.location.state.slug}
                 />
             );
         }
+        else
+        return (<h1>Coming soon</h1>)
       });
   });
-  this.setState({ episodesElement: Episodes });
+  console.log(episodes)
+  this.setState({episodesElement: episodes.flat()});
 }
 
 render() {
-    console.log(this.state.episodesElements)
+    console.log(this.state.episodesElement)
   return <div className = "flex-container">
-    {this.state.episodesElements}
+    {this.state.episodesElement}
 </div>
 }
 }

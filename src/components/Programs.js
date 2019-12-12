@@ -28,6 +28,7 @@ async componentDidMount() {
               thumbnail={x.thumbnail}
               slug={x.slug}
               type={x.type}
+              svtVideoId = {x.svtVideoId}
           />
       );
   });

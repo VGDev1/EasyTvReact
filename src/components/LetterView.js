@@ -31,6 +31,7 @@ export class LetterView extends Component {
                 />
             );
         });
+        console.log(Programs)
         this.setState({Programs: Programs});
       }
       
