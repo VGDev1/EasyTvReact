@@ -11,6 +11,12 @@ class HLSPage extends Component {
         }
     }
 
+    async getVideoIdFromSlug(slug) {
+      const data = await fetch(`http://localhost:3000/api/svt/episodes/${slug}`);
+      const resp = await data.json();
+      return resp;
+    }
+
       async getVideoId(id) {
         const data = await fetch(`http://localhost:3000/api/svt/getVideoId/${id}`);
         const resp = await data.json();
@@ -24,9 +30,11 @@ class HLSPage extends Component {
       }
 
       async componentDidMount() {
-        const videoId = await this.getVideoId(this.props.location.state.m3u8Link)
-        console.log(videoId)
-        const resp = await this.getm3u8Link(videoId.svtVideoId)
+        const videoId = await this.getVideoIdFromSlug(this.props.location.state.slug)
+        console.log(this.props.location.state.slug)
+        console.log(videoId.data[1].items[0].item.videoSvtId)
+        const resp = await this.getm3u8Link(videoId.data[1].items[0].item.videoSvtId)
+        console.log(resp)
         this.setState({link: resp});
       }
       

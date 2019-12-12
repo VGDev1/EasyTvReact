@@ -26,7 +26,7 @@ async componentDidMount() {
           <Program
               label={x.name}
               thumbnail={x.thumbnail}
-              svtId={x.svtId}
+              slug={x.slug}
           />
       );
   });

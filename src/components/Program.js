@@ -17,7 +17,7 @@ export class Program extends Component {
           pathname: '/player',
           className: "nav-link",
           state: {
-            m3u8Link: this.props.svtId
+            slug: this.props.slug
         }
       }} >
         <img 
