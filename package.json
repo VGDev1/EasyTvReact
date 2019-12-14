@@ -12,7 +12,7 @@
     "react-hls-player": "0.0.5",
     "react-live-clock": "^3.1.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
