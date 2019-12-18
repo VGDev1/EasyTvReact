@@ -37,7 +37,6 @@ export class Program extends Component {
         } else {
             return (
                 <div className='media'>
-                    <div className='Season' id={this.props.season}>
                         <a href='/#' onClick={handleclick}>
                             <Link
                                 to={{
@@ -54,7 +53,6 @@ export class Program extends Component {
                         </a>
                         <p>{this.props.label}</p>
                     </div>
-                </div>
             );
         }
     }
