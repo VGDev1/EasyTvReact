@@ -23,25 +23,30 @@ export class Episodes extends Component {
     async componentDidMount() {
         const resp = await this.getEpisodes(this.props.location.state.slug);
         let episodes = resp.data.map((x) => {
-            return ( 
-                <div className= {x.name}>
+            console.log();
+            return (
+                <div className={x.name} data={x.items[0].item.validFrom}>
                     <h1>{x.name}</h1>
                     {x.items.map((y) => {
                         if (y.item.videoSvtId !== '') {
                             return (
                                 <Program
                                     label={y.item.name}
-                                    thumbnail={this.getThumbnail(y.item.image.id, y.item.image.changed)}
+                                    thumbnail={this.getThumbnail(
+                                        y.item.image.id,
+                                        y.item.image.changed,
+                                    )}
                                     type='Single'
                                     svtVideoId={y.item.videoSvtId}
                                     slug={this.props.location.state.slug}
+                                    date={y.item.validFrom}
                                 />
                             );
                         }
                     })}
-                </div>    
-            )}
-        );
+                </div>
+            );
+        });
         console.log(episodes);
         this.setState({ episodesElement: episodes.flat() });
     }
