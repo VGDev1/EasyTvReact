@@ -15,21 +15,23 @@ export class Program extends Component {
         if (this.props.type === 'Single') {
             return (
                 <div className='media'>
-                    <a href='/#' onClick={handleclick}>
-                        <Link
-                            to={{
-                                pathname: '/player',
-                                className: 'nav-link',
-                                state: {
-                                    slug: this.props.slug,
-                                    svtVideoId: this.props.svtVideoId,
-                                },
-                            }}
-                        >
-                            <img src={this.props.thumbnail} alt='new' />
-                        </Link>
-                    </a>
-                    <p>{this.props.label}</p>
+                    <div className='Season' id={this.props.season}>
+                        <a href='/#' onClick={handleclick}>
+                            <Link
+                                to={{
+                                    pathname: '/player',
+                                    className: 'nav-link',
+                                    state: {
+                                        slug: this.props.slug,
+                                        svtVideoId: this.props.svtVideoId,
+                                    },
+                                }}
+                            >
+                                <img src={this.props.thumbnail} alt='new' />
+                            </Link>
+                        </a>
+                        <p>{this.props.label}</p>
+                    </div>
                 </div>
             );
         } else {
