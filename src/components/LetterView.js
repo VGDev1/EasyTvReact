@@ -25,7 +25,7 @@ export class LetterView extends Component {
             if (x.type !== 'Single') {
                 return (
                     <Program
-                        label={x.name}
+                        label={x.title}
                         thumbnail={x.thumbnail}
                         slug={x.slug}
                         type={x.type}
@@ -36,7 +36,7 @@ export class LetterView extends Component {
                 console.log(x.name);
                 return (
                     <ProgramSingle
-                        label={x.name}
+                        label={x.title}
                         thumbnail={x.thumbnail}
                         slug={x.slug}
                         type={x.type}
