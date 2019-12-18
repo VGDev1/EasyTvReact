@@ -25,6 +25,7 @@ export class Episodes extends Component {
         let episodes = resp.data.map((x) => {
             return ( 
                 <div className= {x.name}>
+                    <h1>{x.name}</h1>
                     {x.items.map((y) => {
                         if (y.item.videoSvtId !== '') {
                             return (
