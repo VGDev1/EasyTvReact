@@ -23,21 +23,24 @@ export class Episodes extends Component {
     async componentDidMount() {
         const resp = await this.getEpisodes(this.props.location.state.slug);
         let episodes = resp.data.map((x) => {
-            return x.items.map((y) => {
-                if (y.item.videoSvtId !== '') {
-                    return (
-                        <Program
-                            label={y.item.name}
-                            thumbnail={this.getThumbnail(y.item.image.id, y.item.image.changed)}
-                            type='Single'
-                            svtVideoId={y.item.videoSvtId}
-                            slug={this.props.location.state.slug}
-                            season = {x.name}
-                        />
-                    );
-                }
-            });
-        });
+            return ( 
+                <div className= {x.name}>
+                    {x.items.map((y) => {
+                        if (y.item.videoSvtId !== '') {
+                            return (
+                                <Program
+                                    label={y.item.name}
+                                    thumbnail={this.getThumbnail(y.item.image.id, y.item.image.changed)}
+                                    type='Single'
+                                    svtVideoId={y.item.videoSvtId}
+                                    slug={this.props.location.state.slug}
+                                />
+                            );
+                        }
+                    })}
+                </div>    
+            )}
+        );
         console.log(episodes);
         this.setState({ episodesElement: episodes.flat() });
     }
