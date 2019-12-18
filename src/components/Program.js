@@ -13,8 +13,6 @@ export class Program extends Component {
             e.preventDefault();
         }
         if (this.props.type === 'Single') {
-            console.log('CLICKADE PÅ NÅGOT SOM BORDE SPELAS');
-            console.log(this.props.slug);
             return (
                 <div className='media'>
                     <a href='/#' onClick={handleclick}>
@@ -37,21 +35,23 @@ export class Program extends Component {
         } else {
             return (
                 <div className='media'>
-                    <a href='/#' onClick={handleclick}>
-                        <Link
-                            to={{
-                                pathname: '/episodes',
-                                className: 'test',
-                                state: {
-                                    slug: this.props.slug,
-                                    svtVideoId: this.props.svtVideoId,
-                                },
-                            }}
-                        >
-                            <img src={this.props.thumbnail} alt='new' />
-                        </Link>
-                    </a>
-                    <p>{this.props.label}</p>
+                    <div className='Season' id={this.props.season}>
+                        <a href='/#' onClick={handleclick}>
+                            <Link
+                                to={{
+                                    pathname: '/episodes',
+                                    className: 'test',
+                                    state: {
+                                        slug: this.props.slug,
+                                        svtVideoId: this.props.svtVideoId,
+                                    },
+                                }}
+                            >
+                                <img src={this.props.thumbnail} alt='new' />
+                            </Link>
+                        </a>
+                        <p>{this.props.label}</p>
+                    </div>
                 </div>
             );
         }

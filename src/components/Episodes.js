@@ -25,8 +25,6 @@ export class Episodes extends Component {
         let episodes = resp.data.map((x) => {
             return x.items.map((y) => {
                 if (y.item.videoSvtId !== '') {
-                    console.log(this.getThumbnail(y.item.image.id, y.item.image.changed));
-                    console.log(y.item.name);
                     return (
                         <Program
                             label={y.item.name}
@@ -34,6 +32,7 @@ export class Episodes extends Component {
                             type='Single'
                             svtVideoId={y.item.videoSvtId}
                             slug={this.props.location.state.slug}
+                            season = {x.name}
                         />
                     );
                 }
