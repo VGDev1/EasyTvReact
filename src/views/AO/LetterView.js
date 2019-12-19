@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Program from './Program';
-import ProgramSingle from './ProgramSingle';
-import '../static/style.css';
+import Program from '../../components/Program';
+import ProgramSingle from '../SingleProgram/ProgramSingle';
+import '../../static/style.css';
 
 export class LetterView extends Component {
     constructor() {

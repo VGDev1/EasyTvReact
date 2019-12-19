@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Program from './Program';
-import '../static/style.css';
+import Program from '../../components/Program';
+import '../../static/style.css';
 
 export class Episodes extends Component {
     constructor() {

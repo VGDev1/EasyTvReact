@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../static/style.css';
+import '../../../static/style.css';
 import LetterButtons from './LetterButtons';
 
 export class AOs extends Component {

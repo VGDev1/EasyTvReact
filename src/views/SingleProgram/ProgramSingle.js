@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../static/style.css';
+import '../../static/style.css';
 import { Link } from 'react-router-dom';
 
 export class ProgramSingle extends Component {

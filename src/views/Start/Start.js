@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import picture from './EasyTV.png';
-import '../static/style.css';
-import StartButtons from './StartButtons';
-// import Clock from 'react-live-clock';
-import Block from './Clock';
+import picture from '../../static/Images/EasyTV.png';
+import '../../static/style.css';
+import StartButtons from './Sections/StartButtons';
+import Block from './Sections/Clock';
 
 export class Start extends Component {
     render() {

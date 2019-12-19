@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ProgramSingle from './ProgramSingle';
-import Program from './Program';
-import '../static/style.css';
+import ProgramSingle from '../SingleProgram/ProgramSingle';
+import Program from '../../components/Program';
+import '../../static/style.css';
 
 export class Programs extends Component {
     constructor() {
