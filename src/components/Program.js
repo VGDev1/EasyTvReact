@@ -8,6 +8,9 @@ export class Program extends Component {
         const resp = await data.json();
         return resp;
     }
+    maxDesc(desc) {
+        return `${desc.slice(0, 100)}...`;
+    }
     render() {
         function handleclick(e) {
             e.preventDefault();
@@ -15,42 +18,44 @@ export class Program extends Component {
         if (this.props.type === 'Single') {
             return (
                 <div className='media'>
-                        <a href='/#' onClick={handleclick}>
-                            <Link
-                                to={{
-                                    pathname: '/player',
-                                    className: 'nav-link',
-                                    state: {
-                                        slug: this.props.slug,
-                                        svtVideoId: this.props.svtVideoId,
-                                    },
-                                }}
-                            >
-                                <img src={this.props.thumbnail} alt='new' />
-                            </Link>
-                        </a>
-                        <p>{this.props.label}</p>
+                    <a href='/#' onClick={handleclick}>
+                        <Link
+                            to={{
+                                pathname: '/player',
+                                className: 'nav-link',
+                                state: {
+                                    slug: this.props.slug,
+                                    svtVideoId: this.props.svtVideoId,
+                                },
+                            }}
+                        >
+                            <img src={this.props.thumbnail} alt='new' />
+                        </Link>
+                    </a>
+                    <p className='epsiode'>{this.props.label}</p>
+                    <p className='desc'>{this.maxDesc(this.props.desc)}</p>
                 </div>
             );
         } else {
             return (
                 <div className='media'>
-                        <a href='/#' onClick={handleclick}>
-                            <Link
-                                to={{
-                                    pathname: '/episodes',
-                                    className: 'test',
-                                    state: {
-                                        slug: this.props.slug,
-                                        svtVideoId: this.props.svtVideoId,
-                                    },
-                                }}
-                            >
-                                <img src={this.props.thumbnail} alt='new' />
-                            </Link>
-                        </a>
-                        <p>{this.props.label}</p>
-                    </div>
+                    <a href='/#' onClick={handleclick}>
+                        <Link
+                            to={{
+                                pathname: '/episodes',
+                                className: 'test',
+                                state: {
+                                    slug: this.props.slug,
+                                    svtVideoId: this.props.svtVideoId,
+                                },
+                            }}
+                        >
+                            <img src={this.props.thumbnail} alt='new' />
+                        </Link>
+                    </a>
+                    <p className='desc'>{this.props.desc}</p>
+                    <p>{this.props.label}</p>
+                </div>
             );
         }
     }

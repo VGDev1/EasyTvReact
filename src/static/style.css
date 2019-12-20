@@ -1,3 +1,4 @@
+@import 'normalize.css';
 html,
 body {
     margin: 0;
@@ -69,6 +70,24 @@ a.choice {
 }
 
 /* EPISODES */
+div.videos {
+    display: grid;
+    grid-template-rows: 1fr;
+}
 div.Kommande {
     display: none;
+}
+
+h1.title {
+    margin-left: 0.5rem;
+}
+
+div.season {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+p.desc {
+    max-width: 30ch;
 }
