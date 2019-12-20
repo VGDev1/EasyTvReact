@@ -32,7 +32,7 @@ export class Program extends Component {
                             <img src={this.props.thumbnail} alt='new' />
                         </Link>
                     </a>
-                    <p className='epsiode'>{this.props.label}</p>
+                    <p className='episode'>{this.props.label}</p>
                     <p className='desc'>{this.maxDesc(this.props.desc)}</p>
                 </div>
             );

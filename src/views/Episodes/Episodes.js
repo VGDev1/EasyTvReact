@@ -16,17 +16,26 @@ export class Episodes extends Component {
         const resp = await data.json();
         return resp;
     }
+
     getThumbnail(id, changed) {
         return `https://www.svtstatic.se/image/wide/300/${id}/${changed}?quality=90`;
     }
 
     async componentDidMount() {
         const resp = await this.getEpisodes(this.props.location.state.slug);
-        let episodes = resp.data.map((x) => {
+        let episodes = resp.data.map((x, i) => {
             console.log();
             return (
-                <div key={x.name}>
-                    <h1 className='title'>{x.name}</h1>
+                <div className='seasons' key={x.name}>
+                    <input
+                        id={'collapsible' + i}
+                        class='toggle'
+                        type='checkbox'
+                        defaultChecked={i === 0}
+                    />
+                    <label for={'collapsible' + i} class='lbl-toggle'>
+                        {x.name}
+                    </label>
                     <div className='season' key={x.name} data={x.items[0].item.validFrom}>
                         {x.items.map((y) => {
                             if (y.item.videoSvtId !== '') {
