@@ -13,7 +13,10 @@ body {
     color: white;
     font-family: helvetica, arial, sans-serif;
 }
-
+p {
+    margin-block-start: 0px !important;
+    margin-block-end: 0px !important;
+}
 .background {
     margin-top: 3rem;
     width: 100%;
@@ -48,13 +51,21 @@ time {
 }
 
 .choice {
-    font-size: 2rem;
-    width: 30%; /* 1470px, 990px utan */
-    height: 100%;
+    text-align: center;
+    font-size: 3.5em;
+    margin: 2rem 0 0 2rem;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
     margin-right: 2rem;
     border: 1px solid grey;
     transition: all 0.2s ease-in-out;
     background-color: rgba(0, 0, 0, 0.85);
+}
+
+.choice > a {
+    text-decoration: none !important;
+    color: white !important;
 }
 
 a.choice {

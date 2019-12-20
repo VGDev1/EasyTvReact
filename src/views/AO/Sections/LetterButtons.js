@@ -10,9 +10,9 @@ export class LetterButtons extends Component {
             <div className='choice center'>
                 <a href='/#' onClick={handleclick}>
                     <Link
+                        style={{ textDecoration: 'none', color: '#21af34' }}
                         to={{
                             pathname: '/programs',
-                            className: 'nav-link',
                             state: {
                                 letter: this.props.letter,
                             },

@@ -41,6 +41,7 @@ export class AOs extends Component {
             'Å',
             'Ä',
             'Ö',
+            '0 - 9',
         ];
         let Letters = list.map((x) => {
             return <LetterButtons letter={x} />;
