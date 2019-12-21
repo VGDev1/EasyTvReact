@@ -42,7 +42,7 @@ export class ProgramSingle extends Component {
                         <img src={this.props.thumbnail} alt='new' />
                     </Link>
                 </a>
-                <p>{this.props.label}</p>
+                <p className='title'>{this.props.label}</p>
             </div>
         );
     }

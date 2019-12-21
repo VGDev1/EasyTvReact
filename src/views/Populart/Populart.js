@@ -48,7 +48,7 @@ export class Programs extends Component {
     }
 
     render() {
-        return <div className='flex-container'>{this.state.popularJson}</div>;
+        return <div className='programs'>{this.state.popularJson}</div>;
     }
 }
 

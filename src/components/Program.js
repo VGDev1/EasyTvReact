@@ -54,7 +54,7 @@ export class Program extends Component {
                         </Link>
                     </a>
                     <p className='desc'>{this.props.desc}</p>
-                    <p>{this.props.label}</p>
+                    <p className='title'>{this.props.label}</p>
                 </div>
             );
         }

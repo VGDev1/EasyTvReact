@@ -26,14 +26,14 @@ export class Episodes extends Component {
         let episodes = resp.data.map((x, i) => {
             console.log();
             return (
-                <div className='seasons' key={x.name}>
+                <div className='seasons' id={x.name} key={x.name}>
                     <input
                         id={'collapsible' + i}
-                        class='toggle'
+                        className='toggle'
                         type='checkbox'
                         defaultChecked={i === 0}
                     />
-                    <label for={'collapsible' + i} class='lbl-toggle'>
+                    <label for={'collapsible' + i} className='lbl-toggle'>
                         {x.name}
                     </label>
                     <div className='season' key={x.name} data={x.items[0].item.validFrom}>

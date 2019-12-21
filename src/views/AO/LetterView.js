@@ -52,7 +52,7 @@ export class LetterView extends Component {
     render() {
         if (this.state.Programs != null) {
             console.log('If Statement');
-            return <div className='flex-container'>{this.state.Programs}</div>;
+            return <div className='programs'>{this.state.Programs}</div>;
         } else {
             console.log('Else Statement');
             return (
