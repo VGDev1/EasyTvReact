@@ -1,1 +1,1 @@
-An react frontend for an svtplay ripoff
+A react frontend for an svtplay ripoff
