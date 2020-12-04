@@ -24,6 +24,7 @@
   - [Run](#Run)
     - [React app](#React-app)
     - [Backend](#Backend)
+  - [Contribute](#Contribute)
 
 ## What does it do
 
@@ -92,3 +93,7 @@ This application provides and easier way to use SvtPlay, built for people just w
 2. Start Redis server: `redis-server`
 3. Start cors proxy: `npm run proxy`
 4. Start api: `npm run api`
+
+### Contribute
+
+This project is not maintained anymore.
