@@ -94,6 +94,6 @@ This application provides and easier way to use SvtPlay, built for people just w
 3. Start cors proxy: `npm run proxy`
 4. Start api: `npm run api`
 
-### Contribute
+## Contribute
 
 This project is not maintained anymore.
