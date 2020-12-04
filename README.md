@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./resources/easyTV.png" />
+  <img src="https://raw.githubusercontent.com/VGDev1/EasyTvReact/master/resources/EasyTV.png" />
 </p>
 
 # easyTV
