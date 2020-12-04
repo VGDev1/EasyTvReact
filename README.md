@@ -1,9 +1,6 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/VGDev1/EasyTvReact/master/resources/EasyTV.png" />
 </p>
-
-# easyTV
-
 <p align="center">
   <img src="https://img.shields.io/travis/ta4j/ta4j/develop?label=develop" />
   <img src="https://img.shields.io/travis/ta4j/ta4j/master?label=master" />
